@@ -2,6 +2,10 @@
 
 A professional, customizable CV template built with LaTeX featuring folder-based organization and easy personalization.
 
+| Page 1 | Page 2 |
+|--------|--------|
+| ![Page 1](docs/page1.jpg) | ![Page 2](docs/page2.jpg) |
+
 The early version of this CV Template was developed during a undergraduate course project in 2021. For that, I thank my colleagues: [Beatriz Barradas](https://github.com/barrafas), [Carol Erthal](https://github.com/anacarolerthal), [Murilo Calegari](https://github.com/MuriloCalegari) and [Vinícius Hedler](https://github.com/viniciushedler).
 
 Recently, I decided to refactor this template to make it more accessible and user-friendly, so why not make it public?

@@ -1,0 +1,73 @@
+\documentclass[11pt, oneside]{book}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[a4paper, left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{times}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{tikz}
+\usepackage{xcolor}
+% Find icons: https://mirrors.ibiblio.org/CTAN/fonts/fontawesome5/doc/fontawesome5.pdf
+\usepackage{fontawesome5}
+\usepackage{subfigure}
+\usepackage{tcolorbox}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{multicol}
+\usepackage{titling}
+% \usepackage{garamondlibre}
+% \setsansfont{Open Sans}
+
+% ---- Personal Data Configuration ---- %
+\input{personal-data}
+
+\hypersetup{
+    pdfauthor={\fullName},     % author
+    pdfcreator={\fullName},   % creator of the document
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=black,          % color of internal links (change box color with linkbordercolor)
+    citecolor=black,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=black,
+    breaklinks=true % color of external lin
+}
+
+% ------ Title Formatting ------ %
+\input{../config/titles}
+
+\addto\captionsbrazil{\renewcommand{\chaptername}{Currículo}}
+
+% --- Circular Grade Scale --- %
+\input{../config/grades}
+
+% ---- Custom CV Commands ---- %
+\input{../config/cv-commands}
+
+% -- Page Numbering -- %
+\pagestyle{fancy}
+\setlength\headheight{14pt}
+
+
+\begin{document}
+\pagestyle{empty}
+\pagenumbering{gobble}
+
+\input{cv}
+
+\newpage
+
+\end{document}

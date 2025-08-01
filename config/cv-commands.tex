@@ -1,0 +1,246 @@
+% Custom CV Commands and Environments
+% This file defines user-friendly commands to simplify CV creation
+
+% ============================================================================
+% SECTION ENVIRONMENTS
+% ============================================================================
+
+% Education Section
+\newenvironment{education}{%
+    \section*{\educationTitle}
+    \vspace{-0.25cm}
+    \begin{itemize}[wide,labelindent=0cm,leftmargin=0cm,topsep=0cm]
+}{%
+    \end{itemize}
+}
+
+% Professional Experience Section
+\newenvironment{experiences}{%
+    \section*{\experienceTitle}
+    \begin{itemize}[wide,labelindent=0cm,leftmargin=0cm]
+}{%
+    \end{itemize}
+}
+
+% Academic Experience Section
+\newenvironment{academicexperiences}{%
+    \section*{\academicExpTitle}
+    \begin{itemize}[wide,labelindent=0cm,leftmargin=0cm]
+}{%
+    \end{itemize}
+}
+
+% Awards Section
+\newenvironment{awards}{%
+    \section*{\awardsTitle}
+    \begin{itemize}[wide,labelindent=0cm,leftmargin=0cm]
+}{%
+    \end{itemize}
+}
+
+% ============================================================================
+% INDIVIDUAL ENTRY COMMANDS
+% ============================================================================
+
+% Education Entry
+% Usage: \education{Degree Title}{Start Date -- End Date}{Institution}{City, Country}{Description}
+\newcommand{\educationentry}[5]{%
+    \item[\faAngleRight] \textbf{#1} \hfill \colorbox{black}{\hspace{0.5cm}\textcolor{white}{#2}} \\ 
+    #3 \\ #4
+    
+    {\small #5}
+}
+
+% Experience Entry
+% Usage: \experience{Job Title}{Start Date -- End Date}{Company}{Description}
+\newcommand{\experience}[4]{%
+    \item[\faAngleRight] \textbf{#1} \hfill \colorbox{black}{\hspace{0.5cm}\textcolor{white}{#2}} \\ #3
+    
+    {\small #4}
+}
+
+% Academic Experience Entry
+% Usage: \academicexperience{Position}{Start Date -- End Date}{Institution}{Description}
+\newcommand{\academicexperience}[4]{%
+    \item[\faAngleRight] \textbf{#1} \hfill \colorbox{black}{\hspace{0.5cm}\textcolor{white}{#2}} \\ #3
+    
+    {\small #4}
+}
+
+% Award Entry
+% Usage: \award{Award Name}{Organization, Year}
+\newcommand{\award}[2]{%
+    \item[\faTrophy] #1 - #2.
+}
+
+% Reference Entry (updated for simpler approach)
+% Usage: \reference{Name, Title}{email}{Area/Type}
+\newcommand{\reference}[3]{%
+    #1. & #2 & #3 \vspace{0.25cm} \\
+}
+
+% ============================================================================
+% ACTIVITIES AND PROJECTS SECTION
+% ============================================================================
+
+% Activities Section with subsections
+\newenvironment{activities}{%
+    \section*{\activitiesTitle}
+    \vspace{0.25cm}
+}{}
+
+% Presentations Subsection
+\newenvironment{presentations}{%
+    \noindent
+    \tabularx{\textwidth}{l X}%
+    \multicolumn{2}{l}{\Large \textbf{\faAngleRight\ \presentationsTitle}} \vspace{0.25cm} \\
+}{%
+    \endtabularx%
+}
+
+% Congresses Subsection
+\newenvironment{congresses}{%
+    \noindent
+    \tabularx{\textwidth}{l X}
+    \multicolumn{2}{l}{\Large \textbf{\faAngleRight\ \congressTitle}} \vspace{0.25cm} \\
+}{%
+    \endtabularx
+}
+
+% Research Projects Subsection
+\newenvironment{researchprojects}{%
+    \noindent
+    \tabularx{\textwidth}{l X}
+    \multicolumn{2}{l}{\Large \textbf{\faAngleRight\ \researchProjectsTitle}} \vspace{0.25cm} \\
+}{%
+    \endtabularx
+}
+
+% Courses/Materials Subsection
+\newenvironment{courses}{% 
+    \noindent
+    \tabularx{\textwidth}{l X}
+    \multicolumn{2}{l}{\Large \textbf{\faAngleRight\ \coursesTitle}} \vspace{0.25cm} \\
+}{%
+    \endtabularx
+}
+
+% Selected Projects Subsection
+\newenvironment{selectedprojects}{%
+    \noindent
+    \tabularx{\textwidth}{l X}
+    \multicolumn{2}{l}{\Large \textbf{\faAngleRight\ \selectedProjectsTitle}} \vspace{0.25cm} \\
+}{%
+    \endtabularx
+}
+
+% Work in Progress Subsection
+\newenvironment{workinprogress}{%
+    \noindent
+    \tabularx{\textwidth}{l X}
+    \multicolumn{2}{l}{\Large \textbf{\faAngleRight\ \workInProgressTitle}} \vspace{0.25cm} \\
+}{%
+    \endtabularx
+}
+
+% Presentations Subsection
+\newenvironment{references}{%
+    \noindent
+    \tabularx{\textwidth}{l X X}%
+    \multicolumn{3}{l}{\Large \textbf{\faAngleRight\ \referencesTitle}} \vspace{0.25cm} \\
+}{%
+    \endtabularx%
+}
+
+% ============================================================================
+% ACTIVITY/PROJECT ENTRY COMMANDS
+% ============================================================================
+
+% Presentation Entry
+% Usage: \presentation{Year}{Title}{Description}
+\newcommand{\presentation}[3]{%
+    \colorbox{black}{\hspace{0.5cm}\textcolor{white}{#1}} & \textbf{#2} \\
+    & {#3} \\
+    \\
+}
+
+% Congress Entry
+% Usage: \congress{Year}{Congress Name}
+\newcommand{\congress}[2]{%
+    \colorbox{black}{\hspace{0.5cm}\textcolor{white}{#1}} & \textbf{#2} \vspace{0.25cm} \\
+}
+
+% Research Project Entry
+% Usage: \researchproject{Date Range}{Project Title}{Supervisor}{Description}
+\newcommand{\researchproject}[4]{%
+    \colorbox{black}{\hspace{0.5cm}\textcolor{white}{#1}} & \textbf{#2} \\
+    & {\textit{#3}
+    
+    #4} \\
+    \\
+}
+
+% Course/Material Entry
+% Usage: \course{Year}{Course Title}{Description}
+\newcommand{\course}[3]{%
+    \colorbox{black}{\hspace{0.5cm}\textcolor{white}{#1}} & \textbf{#2} \\
+    & {#3} \\
+    \\
+}
+
+% Selected Project Entry
+% Usage: \selectedproject{Year}{Project Title}{Description}
+\newcommand{\selectedproject}[3]{%
+    \colorbox{black}{\hspace{0.5cm}\textcolor{white}{#1}} & \textbf{#2} \\
+    & {#3} \\
+    \\
+}
+
+% Work in Progress Entry
+% Usage: \workprogress{Date Range}{Project Title}{Collaborators}
+\newcommand{\workprogress}[3]{%
+    \colorbox{black}{\hspace{0.5cm}\textcolor{white}{#1}} & \textbf{#2} \\
+    & \textit{#3} \vspace{0.25cm} \\
+}
+
+% ============================================================================
+% SPECIAL COMMANDS
+% ============================================================================
+
+% About Me section
+% Usage: \aboutme{Your description text}
+\newcommand{\aboutme}[1]{%
+    \section*{\aboutMeTitle}
+    #1\blfootnote{Last update by \today}
+}
+
+% Contact Header
+% Usage: \contactheader (uses variables from personal-data.tex)
+\newcommand{\contactheader}{%
+    \chapter{\fullName \ \personalIcon}
+    \vspace{-0.4cm}
+    \begin{table}[!h]
+        \centering
+        \begin{tabular}{ccccc}
+        \faEnvelope
+        \ \href{mailto:\email}{\email}  & \faMapMarker \ \location & \faLinkedin \ \href{https://www.linkedin.com/in/\linkedinHandle/}{\linkedinHandle}
+        & \faGithub \ \href{https://www.github.com/\githubHandle/}{\githubHandle}
+        & \faHome \ \href{https://\personalWebsite/}{\personalWebsite}
+        \end{tabular}
+    \end{table}
+    \vspace{-0.4cm}
+    \noindent
+}
+
+% Technology/Skills list
+% Usage: \technologies{list of technologies separated by commas}
+\makeatletter
+\newcommand{\technologies}[1]{%
+    \section*{Tecnologias}
+    \begin{multicols}{4}
+    \begin{itemize}
+        \@for\tech:=#1\do{\item[\faAngleRight] \tech}
+    \end{itemize}
+    \end{multicols}
+}
+\makeatother

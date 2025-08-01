@@ -1,0 +1,97 @@
+% Simple CV Template using custom commands
+% This file demonstrates the user-friendly command syntax
+
+% Contact header (uses variables from personal-data.tex)
+\contactheader
+
+% About me section
+\aboutme{
+Write a brief description about yourself here. Mention your background, interests, and current status. 
+
+I am currently a \currentPosition\ at \currentInstitution.
+
+Add more details about your background, achievements, and goals.
+}
+
+% Education section
+\begin{education}
+    \educationentry{Your Degree Title - GPA: X.X/10}{Start Date -- End Date}{Your Institution Name}{Your City, Country}{
+        Add relevant details about your degree, achievements, relevant courses, etc.
+    }
+    
+    \educationentry{Another Degree - GPA: X.X/10}{Start Date -- End Date}{Institution Name}{City, Country}{
+        Add details about this degree.
+    }
+\end{education}
+
+
+% Professional experience section
+\begin{experiences}
+    \experience{Job Title}{Start Date -- End Date}{Company Name}{
+        Describe your role, responsibilities, and achievements in this position.
+    }
+    
+    \experience{Another Job Title}{Start Date -- End Date}{Another Company}{
+        Describe this role and your contributions.
+    }
+\end{experiences}
+
+% Academic experience section
+\begin{academicexperiences}
+    \academicexperience{Academic Position}{Start Date -- End Date}{Institution Name}{
+        Describe your academic role, courses taught, research conducted, etc.
+    }
+\end{academicexperiences}
+
+% Awards section
+\begin{awards}
+    \award{Award Name}{Awarding Organization, Year}
+    \award{Another Award}{Organization, Year}
+\end{awards}
+
+% Activities section
+\begin{activities}
+    % Presentations subsection
+    \begin{presentations}
+        \presentation{Year}{Presentation Title}{
+            Description of your presentation, where it was given, and its impact or relevance.
+        }
+    \end{presentations}
+    
+    % Congresses subsection
+    \begin{congresses}
+        \congress{Year}{Congress/Conference Name}
+    \end{congresses}
+    
+    % Research projects subsection
+    \begin{researchprojects}
+        \researchproject{Start Date -- End Date}{Project Title}{Supervised by Supervisor Name}{
+            Description of your research project, its objectives, methodology, and outcomes.
+        }
+    \end{researchprojects}
+    
+    % Courses subsection
+    \begin{courses}
+        \course{Year}{Course Title}{
+            Description of the course you developed or taught.
+        }
+    \end{courses}
+    
+    % Selected projects subsection
+    \begin{selectedprojects}
+        \selectedproject{Year}{Project Title}{
+            Description of your project, its impact, and relevant links.
+        }
+    \end{selectedprojects}
+    
+    % Work in progress subsection
+    \begin{workinprogress}
+        \workprogress{Start Date -- Today}{Project Title}{joint work with Collaborator Name (Institution)}
+    \end{workinprogress}
+\end{activities}
+
+% % References section
+\begin{references}
+    \reference{Reference Name, Title}{email@institution.edu}{Research/Teaching/Professional}
+    \reference{Another Reference}{email@institution.edu}{Area}
+\end{references}

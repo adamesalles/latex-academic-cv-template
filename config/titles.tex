@@ -1,0 +1,34 @@
+\titleformat
+{\chapter} % Comando
+[display] % Forma
+{\bfseries\huge\scshape} % Formatação
+{} % Rótulo
+{0.2ex} % Sep.
+{
+    \centering
+} % Antes do Código
+[
+\vspace{-0.5ex}
+\rule{\textwidth}{1.2pt}
+] % Depois do Código
+
+\titlespacing*{\chapter}
+{0pt} % left
+{-1cm} % before
+{.2cm} % after
+
+
+\titleformat
+{\section}
+[hang]
+{\Large\bfseries}
+{\thesection.}{0.15em}{\vspace{.4cm}}[\vspace{-0.2cm}\rule{\textwidth}{0.8pt} ]
+
+\titlespacing*{\section}{0pt}{.3cm}{.2cm}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
